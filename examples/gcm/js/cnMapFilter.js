@@ -559,7 +559,7 @@
 			'max-results': 250, // default, can go up to 2500
 			//'orderBy'  : 'startTime',
 			'singleevents': true,
-			'key':'AIzaSyCdpWK6w91IDKmaGtbhPkPtWrZfroi07WQ' // Google API Key for chadnorwood.com
+			'key':'AIzaSyCrMG6uiZF5kGALvRaRRYtUh7J8xKmBXkI' // Google API Key for www.washington.edu
 		};
 		if (cnMF.tz.name != 'unknown') {
 			gCalObj.ctz = cnMF.tz.name; // ex: 'America/Chicago'
