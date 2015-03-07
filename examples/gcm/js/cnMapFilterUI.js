@@ -229,8 +229,9 @@ $(document).ready(function() {
 			myGmap = initGMap();
 			userInteraction.init();
 			initDivs();
-			mapJumpBox(); 
+			//mapJumpBox(); 
 			mapRightTab(cnMFUI.opts.mapId);
+			closeDrawer();
 			
 			//updateSizes();
 
@@ -1015,7 +1016,7 @@ $(document).ready(function() {
 
 		function addLinks (txt) {
 			if (txt && typeof txt == 'string') {
-				return txt.replace(/(http:\/\/[^<>\s]+)/gi,'<a href="$1">$1</a>');				
+				return txt.replace(/(http:\/\/[^<>\s]+)/gi,'<a target="_blank" href="$1">$1</a>');				
 			} else {
 				return txt;
 			}
