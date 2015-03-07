@@ -211,6 +211,7 @@
 		this.eventList = [eventObj.id];
 		this.googleMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(eventObj.lt, eventObj.lg),
+			icon: cnMF.iconUrls[eventObj.calendarNum],
 			map: gMap
 		});
 
@@ -265,6 +266,7 @@
 		types: [],
 		myMarkers: {},
 		tz: {},
+		iconUrls: [ '', 'http://maps.google.com/mapfiles/ms/icons/red-dot.png', 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' ],
 		eventList: []
 	}
 
@@ -590,6 +592,13 @@
 
 		debug.debug(" parseGCalData() calendar data: ",cdata);
 
+
+		if (cnMF.numCalendars) {
+			cnMF.numCalendars++;
+		} else {
+			cnMF.numCalendars = 1;
+		}
+		calendarInfo.calendarNum = cnMF.numCalendars;
 		calendarInfo.calendarId = calendarId;
 		calendarInfo.gcTitle = cdata.summary || 'title unknown';
 		calendarInfo.gcTitle.replace(/"/,'&quot;');
@@ -643,6 +652,7 @@
 				desc: curItem.description,
 				addrOrig: curItem.location || '',  // addrOrig is the location field of the event
 				addrToGoogle: curItem.location || '',
+				calendarNum: calendarInfo.calendarNum,
 				gCalId: curItem.id,
 				//url: url.related || url.alternate, // TODO - is this what we want? see href above
 				url: curItem.htmlLink || '',
@@ -755,6 +765,7 @@
 				desc: curItem.description,
 				addrOrig: curItem.location || '',  // addrOrig is the location field of the event
 				addrToGoogle: curItem.location || '',
+				calendarNum: calendarInfo.calendarNum,
 				gCalId: gCalId,
 				url: curItem.htmlLink || '',
 				dateStart: dateStart,
