@@ -211,7 +211,7 @@
 		this.eventList = [eventObj.id];
 		this.googleMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(eventObj.lt, eventObj.lg),
-			icon: cnMF.iconUrls[eventObj.calendarNum],
+			//icon: cnMF.iconUrls[eventObj.calendarNum],
 			map: gMap
 		});
 
