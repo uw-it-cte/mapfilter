@@ -208,7 +208,7 @@ $(document).ready(function() {
 			redrawing = false,
 			moreThanOneCal = false,
 			calendarsDecoding,
-			emptyTableHtml = "<td>nope</td><td>no match</td><td>uh-uh</td><td>nowhere</td>";
+			emptyTableHtml = "<td></td><td>no match</td><td></td><td></td>";
 
 		/*
 		 *   static variables
