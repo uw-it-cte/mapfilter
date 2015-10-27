@@ -231,7 +231,6 @@ $(document).ready(function() {
 			initDivs();
 			//mapJumpBox(); 
 			mapRightTab(cnMFUI.opts.mapId);
-			closeDrawer();
 			
 			//updateSizes();
 
