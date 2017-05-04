@@ -118,7 +118,7 @@ body {
 	overflow:hidden;
 	z-index:25500;
 }
-
+#gcmMapLogo { display: none; }
 
 .ui-slider .ui-slider-handle {
 	width: 34px;
